@@ -5,9 +5,9 @@ def find_min_in_nested_arrays(src)
   row_index = 0
   while row_index < src.count do
     element_index = 0 
-    lowest_temperatures_element = 100
+    lowest_temperatures_element = nil
     while element_index < src[row_index].count do
-      if src[row_index][element_index] < lowest_temperatures_element
+      if lowest_temperatures_element == nil || src[row_index][element_index] < lowest_temperatures_element
         lowest_temperatures_element = src[row_index][element_index]
       end 
       element_index += 1 
